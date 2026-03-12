@@ -1,4 +1,4 @@
-﻿import { Navigate, Route, Routes } from 'react-router-dom';
+﻿import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
@@ -13,8 +13,9 @@ import BeginnerJavaScriptPage from './pages/BeginnerJavaScriptPage';
 
 function App() {
   return (
+        <BrowserRouter basename="/Learning-Resourse-Oraganizer">
     <Routes>
-      <Route path="/" element={<LandingPage />} />
+      <Route path="/" index exact element={<LandingPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/learning-path" element={<LearningPathPage />} />
@@ -27,6 +28,7 @@ function App() {
       <Route path="/insights" element={<InsightsPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+    </BrowserRouter>
   );
 }
 
