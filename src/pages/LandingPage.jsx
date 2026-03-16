@@ -8,6 +8,7 @@ function LandingPage() {
 
       <main className="landing-layout landing-hero-alt">
         <section className="hero-card">
+          <img className="hero-logo" src="/assets/logo.svg" alt="Learning Organizer Logo" width="80" height="80" />
           <p className="eyebrow">Your Learning Control Center</p>
           <h1>Learning Resource Organizer</h1>
           <p className="hero-lead">
